@@ -1,0 +1,32 @@
+// C++ code
+//
+
+int ledPins[ ] = {2,3,4,5,6,7,8,9};
+
+void setup()
+{
+  int index;
+  for(index = 0; index <= 7; index++)
+  pinMode(ledPins[index], OUTPUT);
+ 
+}
+
+void loop()
+{
+  ramdomLED();
+}
+
+void ramdomLED()
+{
+  int index;
+  int delayTime;
+  index = random(8);
+  delayTime = 100;
+ 
+
+  digitalWrite(ledPins[index], HIGH);
+  delay(delayTime);
+  digitalWrite(ledPins[index], LOW);
+  delay(delayTime);
+
+}
